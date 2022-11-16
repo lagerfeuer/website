@@ -1,0 +1,41 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+export default function Header() {
+  const { asPath } = useRouter();
+  const PAGES = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+    },
+    {
+      name: "Blog",
+      href: "https://blog.deutz.dev",
+    },
+  ];
+
+  console.log(asPath);
+  return (
+    <nav className="flex justify-center items-center px-4 bg-white shadow text-grey-darkest">
+      <div className="flex flex-col justify-center text-center sm:flex-row sm:text-left sm:justify-between sm:items-baseline">
+        {PAGES.map((page) => (
+          <Link
+            key={page.href}
+            href={page.href}
+            className="text-xl no-underline hover:text-blue-dark active:underline active:text-bold m-4" // TODO: active and hover not working
+          >
+            {page.name}
+          </Link>
+        ))}
+      </div>
+    </nav>
+  );
+}
