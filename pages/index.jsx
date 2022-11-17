@@ -13,12 +13,18 @@ function HomePage() {
                   className="rounded-full shadow-lg w-64"
                 />
               </div>
-              <h1 className="text-3xl font-bold mb-8">Hi, I'm Lukas</h1>
-              <h5 className="text-xl font-bold mb-4">
-                I am a DevOps Engineer at{" "}
-                <Link href="https://www.roomstogo.com" target="_blank">
-                  RoomsToGo
-                </Link>
+              <h1 className="text-3xl font-bold mb-4">Hi, I'm Lukas</h1>
+              <h5 className="font-body text-xl mb-4">
+                <span>
+                  DevOps Engineer @
+                  <Link
+                    href="https://www.roomstogo.com"
+                    target="_blank"
+                    className="ml-2 font-bold text-blue-500"
+                  >
+                    Rooms To Go
+                  </Link>
+                </span>
               </h5>
             </div>
           </div>

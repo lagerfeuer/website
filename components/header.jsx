@@ -12,17 +12,21 @@ export default function Header() {
       name: "About",
       href: "/about",
     },
+    // {
+    //   name: "Projects",
+    //   href: "/projects",
+    // },
     {
       name: "Contact",
       href: "/contact",
     },
     {
       name: "Blog",
-      href: "https://blog.deutz.dev",
+      href: "/blog",
+      // href: "https://blog.deutz.dev",
     },
   ];
 
-  console.log(asPath);
   return (
     <nav className="flex justify-center items-center px-4 bg-white shadow text-grey-darkest">
       <div className="flex flex-col justify-center text-center sm:flex-row sm:text-left sm:justify-between sm:items-baseline">
@@ -30,7 +34,7 @@ export default function Header() {
           <Link
             key={page.href}
             href={page.href}
-            className="text-xl no-underline hover:text-blue-dark active:underline active:text-bold m-4" // TODO: active and hover not working
+            className="font-nav text-xl no-underline hover:text-blue-dark active:underline active:text-bold m-4" // TODO: active and hover not working
           >
             {page.name}
           </Link>

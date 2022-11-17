@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ReactCountryFlag from "react-country-flag";
 
 export default function Footer() {
   const ICON_SIZE = 24;
@@ -15,13 +16,18 @@ export default function Footer() {
       icon: "/icons/github-dark-svgrepo-com.svg",
     },
     {
+      name: "gitlab",
+      url: "https://gitlab.com/lagerfeuer",
+      icon: "/icons/gitlab-svgrepo-com.svg",
+    },
+    {
       name: "mail",
       url: "mailto:contact@deutz.dev",
       icon: "/icons/mail-svgrepo-com.svg",
     },
   ];
   return (
-    <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
+    <footer className="font-footer text-center lg:text-left bg-gray-100 text-gray-600">
       <div className="flex justify-center items-center p-6 border-b border-gray-300">
         <div className="flex justify-center">
           {LINKS.map((e) => (
@@ -38,14 +44,9 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="text-center p-6 bg-gray-200">
-        <span>© 2021 Copyright</span>
-        <a
-          className="text-gray-600 font-semibold ml-4"
-          href="https://tailwind-elements.com/"
-        >
-          Made with {"<3"} in AUT
-        </a>
+      <div className="text-center p-3 bg-gray-200">
+        Made with ❤️️ in <ReactCountryFlag countryCode="AT" /> and{" "}
+        <ReactCountryFlag countryCode="US" />.
       </div>
     </footer>
   );
