@@ -8,8 +8,9 @@ export default function About() {
     "AWS",
     "Terraform",
     "Jenkins",
-    "Node.js",
     "Python",
+    "Node.js",
+    "Ruby",
   ];
   return (
     <div className="container my-24 px-6 mx-auto">
@@ -20,8 +21,8 @@ export default function About() {
             <h1 className="text-4xl font-bold mb-4">Lukas Deutz</h1>
             <h5 className="font-body text-xl mb-4">
               <p className="leading-10">
-                I'm a nerd from Austria living in Atlanta, GA.
-                <br /> I currently work for as a{" "}
+                Born and raised in Austria, I moved to Atlanta, GA in 2020.
+                <br /> I currently work as a{" "}
                 <span className="font-bold">
                   DevOps/Infrastructure Engineer
                 </span>{" "}
@@ -34,11 +35,10 @@ export default function About() {
                   Rooms To Go
                 </Link>
                 .
-                <br /> I specialize in{" "}
+                <br /> I have professional experience with:{" "}
                 {KEYWORDS.map((kw, idx) => (
                   <Pill className="m-1">{kw}</Pill>
                 ))}
-                .
               </p>
             </h5>
           </div>

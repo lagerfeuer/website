@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ReactCountryFlag from "react-country-flag";
+import flags from "./flags.json";
 
 export default function Footer() {
   const ICON_SIZE = 24;
@@ -45,8 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center p-3 bg-gray-200">
-        Made with ❤️️ in <ReactCountryFlag countryCode="AT" /> and{" "}
-        <ReactCountryFlag countryCode="US" />.
+        Made with ❤️️ in {flags.AT.emoji} and {flags.US.emoji}.
       </div>
     </footer>
   );
