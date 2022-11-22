@@ -22,7 +22,8 @@ export default function Footer() {
     },
     {
       name: "mail",
-      url: "mailto:contact@deutz.dev",
+      // url: "mailto:contact@deutz.dev",
+      url: "/contact",
       icon: "/icons/mail-svgrepo-com.svg",
     },
   ];
@@ -31,7 +32,12 @@ export default function Footer() {
       <div className="flex justify-center items-center p-6 border-b border-gray-300">
         <div className="flex justify-center">
           {LINKS.map((e) => (
-            <Link key={e.name} href={e.url} target="_blank" className="mr-6">
+            <Link
+              key={e.name}
+              href={e.url}
+              target={e.url.startsWith("/") ? "" : "_blank"}
+              className="mr-6"
+            >
               <span className="w-6">
                 <Image
                   src={e.icon}

@@ -3,8 +3,9 @@ import { useForm, ValidationError } from "@formspree/react";
 export default function ContactForm() {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_KEY);
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p className="my-6 text-center text-xl">Thanks for the message!</p>;
   }
+
   return (
     // see https://flowbite.com/blocks/marketing/contact/
     <section className="bg-white">
@@ -24,7 +25,8 @@ export default function ContactForm() {
             <input
               type="email"
               id="email"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+              name="email"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block w-full p-2.5"
               placeholder="you@email.com"
               required
             />
@@ -35,13 +37,14 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label for="message" className="block mb-2 text-sm font-medium">
+            <label for="subject" className="block mb-2 text-sm font-medium">
               Subject
             </label>
             <input
               type="text"
               id="subject"
-              className="block p-3 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              name="subject"
+              className="block p-3 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-300 focus:border-blue-300"
               placeholder="Hi there"
               required
             />
@@ -57,8 +60,9 @@ export default function ContactForm() {
             </label>
             <textarea
               id="message"
+              name="message"
               rows={6}
-              className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+              className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-300 focus:border-blue-300"
               placeholder="Leave a comment..."
             ></textarea>
             <ValidationError
@@ -69,7 +73,7 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium rounded-lg text-centerrounded-lg bg-green-300 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+            className="py-3 px-5 text-sm font-medium rounded-lg text-centerrounded-lg bg-blue-300 w-full lg:w-fit hover:text-white hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
             disabled={state.submitting}
           >
             Send message
