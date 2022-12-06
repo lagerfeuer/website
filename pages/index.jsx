@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <div>
       <div className="container my-24 px-6 mx-auto">
-        <section className="mb-32 text-gray-800 text-center">
+        <section className="mb-16 text-gray-800 text-center">
           <div className="grid md:grid-cols-1 gap-x-6 lg:gap-x-12">
             <div className="mb-12 md:mb-0">
               <div className="flex justify-center mb-6">
