@@ -1,7 +1,10 @@
+// import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Header() {
+  // TODO: add hamburger menu on mobile view
+  // const [navbarOpen, setNavbarOpen] = useState(false);
   const { asPath } = useRouter();
   const PAGES = [
     {
@@ -20,11 +23,11 @@ export default function Header() {
       name: "Contact",
       href: "/contact",
     },
-    {
-      name: "Blog",
-      href: "/blog",
-      // href: "https://blog.deutz.dev",
-    },
+    // {
+    //   name: "Blog",
+    //   href: "/blog",
+    //   // href: "https://blog.deutz.dev",
+    // },
   ];
 
   return (
