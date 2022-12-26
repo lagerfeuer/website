@@ -8,7 +8,7 @@ function App({ Component, pageProps }) {
     <>
       <PlausibleProvider domain="deutz.dev">
         <Head>
-          <title>Lukas' Website</title>
+          <title>Lukas&apos; Website</title>
         </Head>
         <Layout>
           <Component {...pageProps} />
