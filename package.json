@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "serve": "pnpm run build && python -m http.server --directory out",
+    "build": "next build && next export",
+    "start": "next dev",
     "lint": "next lint"
   },
   "dependencies": {
