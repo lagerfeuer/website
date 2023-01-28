@@ -9,7 +9,7 @@ function HomePage() {
             <div className="lg:mb-12">
               <div className="flex justify-center mb-6">
                 <img
-                  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                  src="/imgs/profile.jpg"
                   className="rounded-full shadow-lg w-64"
                 />
               </div>
