@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import profilePic from "../public/imgs/profile.jpg";
 
 function HomePage() {
   return (
@@ -8,9 +10,13 @@ function HomePage() {
           <div className="grid md:grid-cols-1 gap-x-6 lg:gap-x-12">
             <div className="lg:mb-12">
               <div className="flex justify-center mb-6">
-                <img
-                  src="/imgs/profile.jpg"
+                <Image
+                  src={profilePic}
+                  alt="Profile picture"
                   className="rounded-full shadow-lg w-64"
+                  placeholder="blur"
+                  width={64}
+                  height={64}
                 />
               </div>
               <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m Lukas</h1>

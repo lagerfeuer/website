@@ -47,12 +47,10 @@ export default function Header() {
                 <Link
                   key={page.href}
                   href={page.href}
-                  className={`text-xl py-4 px-4 text-${
-                    page.href === asPath ? "teal" : "gray"
-                  }-500 ${
+                  className={`text-xl py-4 px-4 ${
                     page.href === asPath
-                      ? ""
-                      : "transition duration-150 ease-in-out"
+                      ? "text-teal-600"
+                      : "text-gray-500 transition duration-150 ease-in-out"
                   }`}
                 >
                   {page.name}
@@ -84,7 +82,7 @@ export default function Header() {
       <div className={`${mobileNavbarOpen ? "" : "hidden"}`}>
         <ul className="">
           {pages.map((page) => (
-            <li>
+            <li key={page.href}>
               <Link
                 key={page.href}
                 href={page.href}
