@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Layout from "../components/layout";
 import Head from "next/head";
 import PlausibleProvider from "next-plausible";
+import { Analytics } from "@vercel/analytics/react";
 
 function App({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function App({ Component, pageProps }) {
         </Head>
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </PlausibleProvider>
     </>
