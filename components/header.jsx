@@ -63,12 +63,13 @@ export default function Header() {
               className="outline-none"
               onClick={() => setMobileNavbarOpen(!mobileNavbarOpen)}
             >
+              {/* TODO move svg to separate file and include */}
               <svg
                 className="w-8 h-8 text-gray-500 hover:text-teal-500 "
                 x-show="!showMenu"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
