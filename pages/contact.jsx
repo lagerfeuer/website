@@ -1,6 +1,35 @@
+import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
+function Spinner({ active }) {
+  return (
+    active && (
+      <svg
+        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        ></circle>
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        ></path>
+      </svg>
+    )
+  );
+}
+
 function ContactForm() {
+  const [clickedSend, setClickedSend] = useState(false);
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_KEY);
   if (state.succeeded) {
     return <p className="my-6 text-center text-xl">Thanks for the message!</p>;
@@ -72,9 +101,11 @@ function ContactForm() {
           </div>
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium rounded-lg text-centerrounded-lg bg-blue-600 text-white w-full lg:w-fit hover:shadow-lg transition hover:ease-in-out hover:scale-110"
+            className="py-3 px-5 inline-flex items-center text-sm font-medium rounded-lg text-centerrounded-lg bg-blue-600 text-white w-full lg:w-fit hover:shadow-lg transition hover:ease-in-out hover:scale-110"
             disabled={state.submitting}
+            onClick={() => setClickedSend(true)}
           >
+            <Spinner active={clickedSend} />
             Send message
           </button>
         </form>
