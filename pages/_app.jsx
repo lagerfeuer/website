@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 function App({ Component, pageProps }) {
   return (
     <>
-      <PlausibleProvider domain="deutz.dev">
+      <PlausibleProvider domain="deutz.io">
         <Head>
           <title>Lukas&apos; Website</title>
         </Head>
