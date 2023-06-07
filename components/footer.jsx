@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
       <div className="text-center p-2 bg-gray-200 flex flex-col">
         <div>
-          &copy; <b>2022</b> <b>Lukas Deutz</b> All rights reserved
+          &copy; <b>2023</b> <b>Lukas Deutz</b> All rights reserved
         </div>
         <div>
           Made with ❤️️ in {flags.AT.emoji} and {flags.US.emoji}
