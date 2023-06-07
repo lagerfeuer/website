@@ -22,13 +22,13 @@ function HomePage() {
               <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m Lukas</h1>
               <h5 className="font-body text-xl mb-4">
                 <span>
-                  DevOps Engineer @
+                  Systems Engineer @
                   <Link
-                    href="https://www.roomstogo.com"
+                    href="https://nationbuilder.com"
                     target="_blank"
                     className="ml-2 font-bold text-blue-500"
                   >
-                    Rooms To Go
+                    NationBuilder
                   </Link>
                 </span>
               </h5>

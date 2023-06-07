@@ -1,5 +1,5 @@
-My name is **Lukas Deutz**, and I am a **DevOps/Infrastructure Engineer** based in **Atlanta, GA**.
-I currently work for [Rooms To Go](https://roomstogo.com).
+My name is **Lukas Deutz**, and I am a **DevOps/Infrastructure/Systems Engineer** based in **Atlanta, GA**.
+I currently work for [NationBuilder](https://nationbuilder.com).
 I specialize in AWS and DevOps technologies, with a passion for automating and optimizing the software development and deployment process.
 
 I have a strong background in AWS, Infrastructure as Code, and Continuous Integration/Delivery.
