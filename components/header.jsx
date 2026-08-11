@@ -10,10 +10,10 @@ export default function Header() {
       name: "Home",
       href: "/",
     },
-    {
-      name: "About",
-      href: "/about",
-    },
+    // {
+    //   name: "About",
+    //   href: "/about",
+    // },
     // {
     //   name: "Projects",
     //   href: "/projects",
@@ -47,11 +47,10 @@ export default function Header() {
                 <Link
                   key={page.href}
                   href={page.href}
-                  className={`text-xl py-4 px-4 ${
-                    page.href === asPath
+                  className={`text-xl py-4 px-4 ${page.href === asPath
                       ? "text-teal-600"
                       : "text-gray-500 transition duration-150 ease-in-out"
-                  }`}
+                    }`}
                 >
                   {page.name}
                 </Link>
@@ -87,11 +86,10 @@ export default function Header() {
               <Link
                 key={page.href}
                 href={page.href}
-                className={`block text-lg px-2 py-4 ${
-                  page.href === asPath
+                className={`block text-lg px-2 py-4 ${page.href === asPath
                     ? "text-white bg-teal-500"
                     : "hover:bg-teal-500 hover:text-white transition duration-150 ease-in-out"
-                }`}
+                  }`}
                 onClick={() => setMobileNavbarOpen(false)}
               >
                 {page.name}
