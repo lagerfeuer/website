@@ -1,6 +1,15 @@
+import fs from "fs";
+import path from "path";
 import ReactMarkdown from "react-markdown";
 import MyLink from "../components/link";
-import AboutMarkdown from "../content/about.md";
+
+export async function getStaticProps() {
+  const content = fs.readFileSync(
+    path.join(process.cwd(), "content", "about.md"),
+    "utf8"
+  );
+  return { props: { content } };
+}
 
 export default function About({ content }) {
   return (
@@ -11,7 +20,7 @@ export default function About({ content }) {
             <h1 className="text-4xl font-bold mb-4">Welcome to my website!</h1>
             <article className="font-body prose prose-xl">
               <ReactMarkdown components={{ a: MyLink }}>
-                {AboutMarkdown}
+                {content}
               </ReactMarkdown>
             </article>
           </div>

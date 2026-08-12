@@ -1,26 +1,25 @@
 {
   "scripts": {
     "serve": "pnpm run build && python -m http.server --directory out",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next dev",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@formspree/react": "^2.4.1",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.9",
-    "@vercel/analytics": "^0.1.8",
-    "autoprefixer": "^10.4.13",
-    "next": "^13.0.3",
-    "postcss": "^8.4.19",
-    "raw-loader": "^4.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.5",
-    "tailwindcss": "^3.2.4"
+    "@formspree/react": "^3.0.0",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "@vercel/analytics": "^2.0.1",
+    "next": "^16.3.0",
+    "postcss": "^8.5.26",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "eslint": "8.30.0",
-    "eslint-config-next": "13.1.1"
+    "@tailwindcss/postcss": "^4.3.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.0"
   }
 }
