@@ -54,9 +54,9 @@ export default function Footer() {
         <div>
           &copy; <b>{new Date().getFullYear()}</b> <b>Lukas Deutz</b> All rights reserved
         </div>
-        <div>
-          Made with ❤️️ in {flags.AT.emoji} and {flags.US.emoji}
-        </div>
+        {/* <div> */}
+        {/*   Made with ❤️️ in {flags.AT.emoji} and {flags.US.emoji} */}
+        {/* </div> */}
       </div>
     </footer>
   );
