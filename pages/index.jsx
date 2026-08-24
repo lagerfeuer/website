@@ -22,7 +22,7 @@ function HomePage() {
               <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m Lukas</h1>
               <h5 className="font-body text-xl mb-4">
                 <span>
-                  Systems Engineer @
+                  Senior Systems Engineer @
                   <Link
                     href="https://nationbuilder.com"
                     target="_blank"
